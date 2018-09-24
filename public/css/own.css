@@ -1,0 +1,20 @@
+table.form {
+width:100%;
+table-layout:fixed;
+}
+
+.col-id { width: 4%; }
+.col-title { width: 10%; }
+.col-image { width: 10%; }
+.col-startDate { width: 10%; }
+.col-endDate { width: 10%; }
+.col-venue { width: 11%; }
+.col-news { width: 26%; }
+.col-isPublished { width: 5%; }
+.col-show { width: 6%; }
+.col-edit { width: 6%; }
+
+table.form td {
+word-wrap:break-word;
+	
+}

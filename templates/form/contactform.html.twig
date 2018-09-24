@@ -1,0 +1,18 @@
+{{ form_start(contactform, {'attr': {'class': 'row'}}) }}
+
+    <div class="col-12 col-md-4">
+        {{ form_widget(contactform.name, {'attr': {'placeholder': 'Name'}}) }}
+    </div>
+    <div class="col-12 col-md-4">
+        {{ form_widget(contactform.email, {'attr': {'placeholder': 'Your e-mail'}}) }}
+    </div>
+    <div class="col-12 col-md-4">
+        {{ form_widget(contactform.subject, {'attr': {'placeholder': 'Subject'}}) }}
+    </div>
+    <div class="col-12">
+            {{ form_widget(contactform.message, {'attr': {'placeholder': 'Message', 'rows': '8'}}) }}
+        </div>
+    <div class="col-12 flex justify-content-center">
+        <input class="btn gradient-bg" type="submit" value="Send Message">
+    </div>
+{{ form_end(contactform) }}

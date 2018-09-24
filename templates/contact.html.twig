@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+{% block title %}Contact{% endblock %}
+{% block bodytag %}<body class="contact-page">{% endblock %}
+
+{% block body %} 
+
+    <div class="page-header contact-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="entry-header">
+                    
+                        <!--this includes flash messages success/failure after submitting the contact form -->  
+       {% include 'flash_messages.html.twig' %}
+  
+                        <h1 class="entry-title">Contact</h1>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><!-- .site-header -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="contact-location-details">
+                <h2 class="entry-title">New York</h2>
+
+                <div class="entry-content">
+                    <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facilisis et.</p>
+                </div>
+
+                <footer class="entry-footer">
+                    <ul>
+                        <li class="contact-address">667889 Madison Avenue, no24-56</li>
+                        <li class="contact-number">665 5667 8899 661</li>
+                        <li class="contact-email"><a href="#">office@yourbusiness.com</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="contact-location-details">
+                <h2 class="entry-title">Miami</h2>
+
+                <div class="entry-content">
+                    <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facilisis et.</p>
+                </div>
+
+                <footer class="entry-footer">
+                    <ul>
+                        <li class="contact-address">122344 Island Str, no23</li>
+                        <li class="contact-number">665 5667 8899 661</li>
+                        <li class="contact-email"><a href="#">office@yourbusiness.com</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="contact-location-details">
+                <h2 class="entry-title">Los Angeles</h2>
+
+                <div class="entry-content">
+                    <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facilisis et.</p>
+                </div>
+
+                <footer class="entry-footer">
+                    <ul>
+                        <li class="contact-address">667889 Long Avenue, no24-56</li>
+                        <li class="contact-number">665 5667 8899 661</li>
+                        <li class="contact-email"><a href="#">office@yourbusiness.com</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-page-map">
+    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=university of san francisco&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="contact-form">
+            
+            {% include 'form/contactform.html.twig' %}
+                
+            </div>
+        </div>
+    </div>
+</div>
+  
+{% endblock %}
+
+

@@ -1,0 +1,58 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block title %}Events index{% endblock %}
+
+{% block body %}
+    <h1>Event index</h1>
+
+    <table class="table form">
+        <col class="col-id">
+        <col class="col-title">
+        <col class="col-image">
+        <col class="col-startDate">
+        <col class="col-endDate">
+        <col class="col-venue">
+        <col class="col-news">
+        <col class="col-isPublished">
+        <col class="col-show">
+        <col class="col-edit">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>Venue</th>
+                <th>News</th>
+                <th>IsPublished</th>
+                <th>show</th>
+                <th>edit</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td>{{ event.id }}</td>
+                <td>{{ event.title }}</td>
+                <td>{{ event.image }}</td>
+                <td>{{ event.StartDate ? event.StartDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ event.EndDate ? event.EndDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ event.venue }}</td>
+                <td>{{ event.news }}</td>
+                <td>{{ event.isPublished ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('event_show', {'id': event.id}) }}">show</a></td>
+                <td>
+                    <a href="{{ path('event_edit', {'id': event.id}) }}">edit</a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('event_new') }}">Create new</a>
+{% endblock %}
