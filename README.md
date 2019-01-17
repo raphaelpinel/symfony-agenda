@@ -5,7 +5,8 @@ See the deployed version here:
 please be patient as the project is hosted on a free heroku plan that needs to start dynos. It may take up to 20 seconds to load:
 https://events-agenda.herokuapp.com/events
 
-To run the project you need Composer installed
+To run the project you need Composer installed.
+
 You need to create a database and include this in a .env file at the root directory, for example : 
 ```
 DATABASE_URL=mysql://<user>:<password>@127.0.0.1:8889/<database_name>
